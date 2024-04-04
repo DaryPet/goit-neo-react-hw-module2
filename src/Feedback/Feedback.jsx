@@ -1,9 +1,17 @@
-export default function Feedback({ feedbackCounts }) {
+import { useState } from "react";
+
+export default function Feedback({
+  value: { good, neutral, bad },
+  totalFeedback,
+  positivePercent,
+}) {
   return (
     <div>
-      <p>Good:{feedbackCounts.good} </p>
-      <p>Neutral:{feedbackCounts.neutral} </p>
-      <p>Bad: {feedbackCounts.bad}</p>
+      <p>Good:{good} </p>
+      <p>Neutral:{neutral} </p>
+      <p>Bad: {bad}</p>
+      <p>Total: {totalFeedback}</p>
+      <p>Positive: {positivePercent}%</p>
     </div>
   );
 }
