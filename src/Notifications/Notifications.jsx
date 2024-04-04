@@ -1,8 +1,9 @@
+import css from "./Notifications.module.css";
+
 export default function Notification({ total }) {
   return (
     <>
-      {/* {total === 0 && <p>No feedback yet</p>} */}
-      <p>No feedback yet</p>
+      <p className={css.text}>No feedback yet</p>
     </>
   );
 }
